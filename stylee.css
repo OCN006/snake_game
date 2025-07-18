@@ -1,0 +1,71 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    background: url("/image/snakkebgg3.jpg") no-repeat center center/cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Game board styled like a cartoon box */
+#board {
+    width: 87vmin;
+    height: 90vmin;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 6px dashed #4caf50;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    padding: 4px;
+    backdrop-filter: blur(6px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Snake head: cartoony bubble look */
+.head {
+    background-color: #ffcc00;
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ffeb3b;
+    transition: transform 0.1s ease;
+}
+
+/* Snake body */
+.snake {
+    background-color: #4caf50;
+    border: 1px solid #388e3c;
+    border-radius: 8px;
+}
+
+/* Food as pulsing cartoon candy */
+.food {
+    background-color: #e91e63;
+    border: 2px dashed white;
+    border-radius: 50%;
+    animation: pulse 1s infinite ease-in-out;
+    box-shadow: 0 0 10px #f06292;
+}
+
+/* Animation for food pulse */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
