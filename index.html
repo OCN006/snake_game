@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Neon Snake Game 🐍</title>
   <link rel="stylesheet" href="stylee.css">
 </head>
+
 <body class="body">
   <div id="board"></div>
   <div class="game-controls">
     <div id="scoreBox">Score: 0</div>
     <div class="buttons">
-        <button id="pauseBtn">⏸️ Pause</button>
-        <button id="restartBtn">🔄 Restart</button>
+      <button id="pauseBtn">⏸️ Pause</button>
+      <button id="restartBtn">🔄 Restart</button>
     </div>
+  </div>
+  <!-- On-screen Arrow Controls -->
+<div id="controls">
+    <button class="arrow" id="up">⬆</button><br>
+    <button class="arrow" id="left">⬅</button>
+    <button class="arrow" id="down">⬇</button>
+    <button class="arrow" id="right">➡</button>
 </div>
+
 <script src="script.js"></script>
 </body>
+
 </html>
