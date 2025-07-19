@@ -69,3 +69,40 @@
         transform: scale(1);
     }
 }
+
+.game-controls {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#scoreBox {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid limegreen;
+}
+
+.buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #1f1f1f;
+    color: limegreen;
+    border: 2px solid limegreen;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.buttons button:hover {
+    background-color: limegreen;
+    color: black;
+}
+
