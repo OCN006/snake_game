@@ -44,13 +44,25 @@ function isCollide(snake) {
     );
 }
 
+function restartGame() {
+    document.getElementById("game-over-message").style.display = "none";
+    snakeArr = [{ x: 13, y: 15 }];
+    inputDir = { x: 0, y: 0 };
+    score = 0;
+    scoreBox.innerHTML = "Score: " + score;
+    lastPaintTime = 0;
+    window.requestAnimationFrame(main);
+}
+
+
 function gameEngine() {
     // Collision check
-    if (isCollide(snakeArr)) {
-        alert("Game Over. Press OK to restart.");
-        location.reload();
-        return;
-    }
+   if (isCollide(snakeArr)) {
+    inputDir = { x: 0, y: 0 };
+    document.getElementById("game-over-message").style.display = "block";
+    return; // Stop the game loop
+}
+
 
     // Food eaten
     if (snakeArr[0].x === food.x && snakeArr[0].y === food.y) {
