@@ -18,7 +18,7 @@
 /* Game board styled like a cartoon box */
 #board {
     width: 87vmin;
-    height: 90vmin;
+    height: 87vmin;
     background-color: rgba(255, 255, 255, 0.6);
     border: 6px dashed #4caf50;
     border-radius: 20px;
@@ -26,7 +26,7 @@
     grid-template-rows: repeat(18, 1fr);
     grid-template-columns: repeat(18, 1fr);
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-    padding: 4px;
+    padding: 5px;
     backdrop-filter: blur(6px);
     position: relative;
     overflow: hidden;
@@ -81,22 +81,23 @@
     font-size: 1.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+/* scorebox */
 #scoreBox {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 20px;
-    border-radius: 10px;
-    border: 2px solid limegreen;
+    font-size: 5rem;
+    border-radius: 50px;
+    border: 5px solid limegreen;
 }
 
 .buttons button {
     margin: 0 10px;
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 5rem;
     background-color: #1f1f1f;
     color: limegreen;
-    border: 2px solid limegreen;
-    border-radius: 8px;
+    border: 4px solid limegreen;
+    border-radius: 50px;
     cursor: pointer;
     transition: 0.2s ease;
 }
@@ -104,5 +105,30 @@
 .buttons button:hover {
     background-color: limegreen;
     color: black;
+}
+
+#controls {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.arrow {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    margin: 8px;
+    border: none;
+    border-radius: 10px;
+    background: #ffffffcc;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.arrow:hover {
+    background: #dddddd;
 }
 
