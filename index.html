@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neon Snake Game 🐍</title>
+  <link rel="stylesheet" href="stylee.css">
+</head>
+<body class="body">
+  <div id="board"></div>
+
+  <script>
+    // Minimal demo to render snake and food
+    const board = document.getElementById("board");
+    let snakeArr = [{x: 13, y: 15}];
+    let food = {x: 6, y: 7};
+
+    function drawBoard() {
+      board.innerHTML = '';
+
+      // Draw snake
+      snakeArr.forEach((seg, i) => {
+        const el = document.createElement('div');
+        el.style.gridRowStart = seg.y;
+        el.style.gridColumnStart = seg.x;
+        el.classList.add(i === 0 ? 'head' : 'snake');
+        board.appendChild(el);
+      });
+
+      // Draw food
+      const foodEl = document.createElement('div');
+      foodEl.style.gridRowStart = food.y;
+      foodEl.style.gridColumnStart = food.x;
+      foodEl.classList.add('food');
+      board.appendChild(foodEl);
+    }
+
+    drawBoard();
+  </script>
+</body>
+</html>
