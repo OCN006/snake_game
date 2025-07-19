@@ -12,6 +12,10 @@ const board = document.getElementById("board");
 const scoreBox = document.getElementById("scoreBox");
 const pauseBtn = document.getElementById("pauseBtn");
 const restartBtn = document.getElementById("restartBtn");
+const arrowUp = document.getElementById("up");
+const arrowDown = document.getElementById("down");
+const arrowLeft = document.getElementById("left");
+const arrowRight = document.getElementById("right");
 
 // Sound (optional)
 // const foodSound = new Audio('food.mp3');
@@ -100,6 +104,20 @@ window.addEventListener("keydown", e => {
             inputDir = { x: 1, y: 0 };
             break;
     }
+});
+
+// Arrow button input
+arrowUp.addEventListener("click", () => {
+    if (inputDir.y !== 1) inputDir = { x: 0, y: -1 };
+});
+arrowDown.addEventListener("click", () => {
+    if (inputDir.y !== -1) inputDir = { x: 0, y: 1 };
+});
+arrowLeft.addEventListener("click", () => {
+    if (inputDir.x !== 1) inputDir = { x: -1, y: 0 };
+});
+arrowRight.addEventListener("click", () => {
+    if (inputDir.x !== -1) inputDir = { x: 1, y: 0 };
 });
 
 // Pause/Restart buttons
