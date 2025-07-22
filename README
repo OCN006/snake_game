@@ -1,0 +1,47 @@
+# 🐍 Snake Game
+
+A classic Snake Game built using **HTML, CSS, and JavaScript**. Use arrow keys or on-screen buttons to control the snake, eat food, and grow longer. Avoid hitting walls or yourself!
+
+## 🚀 Live Demo
+
+👉 [Play the Game Here](https://your-username.github.io/snake-game/)  
+(Replace with your actual deployed link)
+
+## 🎮 How to Play
+
+- Use the **arrow keys** on your keyboard (or on-screen buttons if on mobile):
+  - ⬆️ Up Arrow → Move Up
+  - ⬇️ Down Arrow → Move Down
+  - ⬅️ Left Arrow → Move Left
+  - ➡️ Right Arrow → Move Right
+- Click **Play** to start the game.
+- Eat food (🍎) to grow your snake.
+- Avoid colliding with walls or yourself.
+
+## 📂 Project Structure
+
+snake-game/
+├── index.html # Main game UI
+├── style.css # Styling and layout
+├── script.js # Game logic
+└── images/
+└── snakeebgg3.jpg # Background image 
+
+
+
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript 
+
+## 🌐 Deployment
+
+This project is deployed using **GitHub Pages** / **Netlify**.
+
+## 🙌 Acknowledgments
+
+Built for learning and fun! Feel free to fork and customize it.
+
+
+
